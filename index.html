@@ -3,756 +3,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waterproof Oxford Large Capacity Convertible Shoulder Bag - Tas Premium Tahan Air</title>
-    <meta name="description" content="Tas premium waterproof oxford dengan kapasitas besar dan desain convertible. Tahan air 100%, cocok untuk wanita aktif dan profesional.">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>Universal Silicone Luggage Wheel Guard - Pelindung Roda Koper Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
         }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
         }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .sticky-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
         }
-
+        .modal {
+            transition: all 0.3s ease;
+        }
+        .modal-overlay {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .gallery-thumbnail:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .floating-badge {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .stats {
-            display: flex;
-            gap: 2rem;
-            font-size: 0.9rem;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>');
-            background-size: cover;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-badge {
-            background: rgba(255,255,255,0.2);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out 0.2s both;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .hero-image {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-            margin: 2rem auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease-out 0.6s both, float 3s ease-in-out infinite;
-        }
-
-        /* Problem Section */
-        .problem-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: #2c3e50;
-        }
-
-        .problems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .problem-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .problem-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .problem-icon {
-            font-size: 3rem;
-            color: #e74c3c;
-            margin-bottom: 1rem;
-        }
-
-        .solution-card {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        /* Features Section */
-        .features-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-        }
-
-        .feature-card:hover {
-            background: white;
-            border-color: #667eea;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            cursor: pointer;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            animation: fadeInUp 0.3s ease-out;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Testimonials */
-        .testimonials-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 4rem;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .stars {
-            color: #ffc107;
-            margin-bottom: 1rem;
-        }
-
-        .customer-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .customer-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Urgency Section */
-        .urgency-section {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .timer-box {
-            background: rgba(255,255,255,0.2);
-            padding: 1rem;
-            border-radius: 10px;
-            min-width: 80px;
-        }
-
-        .timer-number {
-            font-size: 2rem;
-            font-weight: bold;
-            display: block;
-        }
-
-        .timer-label {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-
-        /* Price Banner */
-        .price-banner {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-            position: sticky;
-            bottom: 0;
-            z-index: 1000;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
-        }
-
-        .price-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .price-info {
-            text-align: left;
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            opacity: 0.7;
-            font-size: 1.2rem;
-        }
-
-        .current-price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .discount-badge {
-            background: #e74c3c;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            margin-left: 1rem;
-            animation: pulse 2s infinite;
-        }
-
-        .cta-button {
-            background: #fff;
-            color: #2ecc71;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .stats {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .countdown-timer {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-
-            .price-content {
-                flex-direction: column;
-                gap: 2rem;
-            }
-
-            .price-info {
-                text-align: center;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .current-price {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-        }
-
-        /* Scroll animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Stock indicator */
-        .stock-indicator {
-            background: #e74c3c;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin: 1rem 0;
-            animation: pulse 2s infinite;
-        }
     </style>
 </head>
-<body>
+<body class="font-sans bg-gray-50">
     <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">NAVA Store</div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fas fa-eye"></i>
-                    <span id="viewers">1,247</span> sedang melihat
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-box"></i>
-                    <span id="stock">23</span> stok tersisa
-                </div>
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1gulkrlb8l7a2.webp" alt="Logo" class="h-10 w-10 rounded-full object-cover">
+                <span class="ml-2 font-bold text-lg text-blue-600">WheelGuard</span>
             </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-700 hover:text-blue-600">Fitur</a>
+                <a href="#gallery" class="text-gray-700 hover:text-blue-600">Galeri</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600">Testimoni</a>
+                <a href="#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#features" class="block py-2 text-gray-700 hover:text-blue-600">Fitur</a>
+            <a href="#gallery" class="block py-2 text-gray-700 hover:text-blue-600">Galeri</a>
+            <a href="#testimonials" class="block py-2 text-gray-700 hover:text-blue-600">Testimoni</a>
+            <a href="#faq" class="block py-2 text-gray-700 hover:text-blue-600">FAQ</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">✨ Produk Terlaris 2024 ✨</div>
-            <h1 class="hero-title">Tas Waterproof Oxford Premium</h1>
-            <p class="hero-subtitle">Tas Multifungsi Tahan Air dengan Kapasitas Besar - Perfect untuk Wanita Modern & Aktif</p>
-            <img src="https://cdn.wshopon.com/image/f7d72d21a4bb8c9b917f25ef39c7ca8adea61ae7-600.jpeg" alt="Waterproof Oxford Bag" class="hero-image">
-            <div class="stock-indicator">
-                <i class="fas fa-fire"></i> Stok Terbatas - Hanya 23 Pcs Tersisa!
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12 md:py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 slide-in">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                    <span class="text-blue-600">Universal Silicone Luggage Wheel Guard</span> - 
+                    Perlindungan Terbaik untuk Koper Anda
+                </h1>
+                <p class="text-lg text-gray-600 mb-6">
+                    Lindungi roda koper Anda dari kerusakan dan bikin perjalanan lebih nyaman tanpa suara berisik!
+                </p>
+                <div class="flex items-center mb-6">
+                    <div class="flex mr-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <span class="text-gray-700">4.9/5 dari 1.200+ review</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 mb-6 inline-block">
+                    <div class="flex items-center">
+                        <div class="bg-green-100 rounded-full p-2 mr-3">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Stok Tersedia: <span id="stock-counter" class="text-blue-600">78</span> set</p>
+                            <p class="text-sm text-gray-500">Banyak orang sedang membeli produk ini</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://nava.orderonline.id/heywego-silikon-roda-koper" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 inline-flex items-center pulse">
+                    BELI SEKARANG <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center fade-in">
+                <div class="relative">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1gulkrlb8l7a2.webp" alt="Universal Silicone Luggage Wheel Guard" class="rounded-lg shadow-xl w-full max-w-md transform rotate-2">
+                    <div class="absolute -bottom-5 -right-5 bg-white p-3 rounded-full shadow-lg floating-badge">
+                        <div class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">HOT ITEM</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Masalah yang Sering Dialami Wanita Aktif</h2>
-            <div class="problems-grid">
-                <div class="problem-card animate-on-scroll">
-                    <div class="problem-icon">
-                        <i class="fas fa-cloud-rain"></i>
-                    </div>
-                    <h3>Tas Basah Kena Hujan</h3>
-                    <p>Barang-barang elektronik dan dokumen penting rusak karena tas tidak tahan air</p>
+    <!-- Problem Solution Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Masalah yang Sering Dihadapi Traveler</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                    <h3 class="text-xl font-semibold text-red-600 mb-3">Masalah:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Roda koper cepat rusak karena gesekan dengan berbagai permukaan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Suara berisik saat menarik koper mengganggu kenyamanan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Roda kotor membuat koper sulit digerakkan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Biaya perbaikan roda koper yang mahal</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="problem-card animate-on-scroll">
-                    <div class="problem-icon">
-                        <i class="fas fa-weight-hanging"></i>
-                    </div>
-                    <h3>Kapasitas Terbatas</h3>
-                    <p>Tas kecil tidak muat untuk kebutuhan sehari-hari wanita modern yang aktif</p>
+                
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">Solusi dengan WheelGuard:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Pelindung silikon premium melindungi roda dari kerusakan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Mengurangi suara berisik saat menarik koper</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Mencegah kotoran masuk ke bagian roda</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Hemat biaya karena roda koper awet lebih lama</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="problem-card animate-on-scroll">
-                    <div class="problem-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <h3>Tidak Fleksibel</h3>
-                    <p>Butuh banyak tas untuk berbagai occasion - kantor, traveling, shopping</p>
-                </div>
-            </div>
-            <div class="solution-card animate-on-scroll">
-                <h2>🎯 SOLUSI TERBAIK: Waterproof Oxford Large Capacity Convertible Shoulder Bag</h2>
-                <p>Tas premium 3-in-1 yang mengatasi semua masalah Anda! Tahan air 100%, kapasitas besar, dan bisa diubah menjadi backpack, shoulder bag, atau handbag sesuai kebutuhan.</p>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Keunggulan Premium Yang Tidak Akan Anda Temukan di Tempat Lain</h2>
-            <div class="features-grid">
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+    <section id="features" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Fitur Unggulan WheelGuard</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Didesain khusus untuk memberikan perlindungan maksimal pada roda koper Anda</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
                     </div>
-                    <h3>100% Waterproof</h3>
-                    <p>Material Oxford premium dengan teknologi waterproof coating yang melindungi barang Anda dari air hujan dan tumpahan</p>
+                    <h3 class="text-xl font-semibold mb-2">Material Silikon Premium</h3>
+                    <p class="text-gray-600">Terbuat dari silikon berkualitas tinggi yang tahan lama dan fleksibel, cocok untuk berbagai jenis roda koper.</p>
                 </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-expand-arrows-alt"></i>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-universal-access text-green-500 text-xl"></i>
                     </div>
-                    <h3>Large Capacity</h3>
-                    <p>Kapasitas super besar muat laptop 15", buku, kosmetik, pakaian ganti, dan kebutuhan harian lainnya</p>
+                    <h3 class="text-xl font-semibold mb-2">Universal Fit</h3>
+                    <p class="text-gray-600">Cocok untuk hampir semua jenis dan ukuran roda koper, baik untuk koper besar maupun kecil.</p>
                 </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-volume-mute text-purple-500 text-xl"></i>
                     </div>
-                    <h3>3-in-1 Convertible</h3>
-                    <p>Bisa digunakan sebagai backpack, shoulder bag, atau handbag hanya dengan mengatur tali</p>
+                    <h3 class="text-xl font-semibold mb-2">Reduksi Suara</h3>
+                    <p class="text-gray-600">Mengurangi suara berisik saat menarik koper, membuat perjalanan Anda lebih nyaman dan tenang.</p>
                 </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-gem"></i>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-broom text-yellow-500 text-xl"></i>
                     </div>
-                    <h3>Premium Oxford Material</h3>
-                    <p>Bahan Oxford berkualitas tinggi yang tahan lama, ringan, dan mudah dibersihkan</p>
+                    <h3 class="text-xl font-semibold mb-2">Mudah Dibersihkan</h3>
+                    <p class="text-gray-600">Cukup dilap dengan kain basah untuk membersihkan, tidak perlu perawatan khusus.</p>
                 </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-snowflake text-red-500 text-xl"></i>
                     </div>
-                    <h3>Secure Compartments</h3>
-                    <p>Multiple compartments dengan resleting YKK premium untuk mengorganisir barang dengan aman</p>
+                    <h3 class="text-xl font-semibold mb-2">Anti Slip</h3>
+                    <p class="text-gray-600">Desain khusus memberikan cengkeraman yang baik di berbagai permukaan, termasuk lantai licin.</p>
                 </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-box-open text-indigo-500 text-xl"></i>
                     </div>
-                    <h3>Stylish Design</h3>
-                    <p>Desain elegan dan modern yang cocok untuk berbagai outfit dan occasion</p>
+                    <h3 class="text-xl font-semibold mb-2">Paket Lengkap</h3>
+                    <p class="text-gray-600">1 set berisi 4 pelindung roda untuk melindungi semua roda koper Anda sekaligus.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Lihat Detail Produk Premium Ini</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal('https://cdn.wshopon.com/image/f7d72d21a4bb8c9b917f25ef39c7ca8adea61ae7-600.jpeg')">
-                    <img src="https://cdn.wshopon.com/image/f7d72d21a4bb8c9b917f25ef39c7ca8adea61ae7-600.jpeg" alt="Main Product">
+    <section id="gallery" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Galeri Produk</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Lihat lebih dekat kualitas dan desain WheelGuard kami</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1gulkrlb8l7a2.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1gulkrlb8l7a2.webp" alt="WheelGuard 1" class="w-full h-40 object-cover rounded-lg">
                 </div>
-                <div class="gallery-item" onclick="openModal('https://cdn.wshopon.com/image/37d9e865a9eed7a089e52cd0c055794e202ad4ec.gif')">
-                    <img src="https://cdn.wshopon.com/image/37d9e865a9eed7a089e52cd0c055794e202ad4ec.gif" alt="Waterproof Feature">
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1du0w8muynb72.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1du0w8muynb72.webp" alt="WheelGuard 2" class="w-full h-40 object-cover rounded-lg">
                 </div>
-                <div class="gallery-item" onclick="openModal('https://cdn.wshopon.com/image/47df3f4179e6b11e580d3825fc876e870b7fb47c.gif')">
-                    <img src="https://cdn.wshopon.com/image/47df3f4179e6b11e580d3825fc876e870b7fb47c.gif" alt="Convertible Feature">
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1dtv9gjyeud0e.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1dtv9gjyeud0e.webp" alt="WheelGuard 3" class="w-full h-40 object-cover rounded-lg">
                 </div>
-                <div class="gallery-item" onclick="openModal('https://cdn.wshopon.com/image/cf6d41e3ed40421e09cc4eaa2aca8d6b2adbe3d9.jpeg')">
-                    <img src="https://cdn.wshopon.com/image/cf6d41e3ed40421e09cc4eaa2aca8d6b2adbe3d9.jpeg" alt="Usage Examples">
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1dtv9gk17z90b.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1dtv9gk17z90b.webp" alt="WheelGuard 4" class="w-full h-40 object-cover rounded-lg">
                 </div>
-                <div class="gallery-item" onclick="openModal('https://cdn.wshopon.com/image/5545f2bc8dbce53ad6b797b5a8e6fce314060ec1.jpeg')">
-                    <img src="https://cdn.wshopon.com/image/5545f2bc8dbce53ad6b797b5a8e6fce314060ec1.jpeg" alt="Product Details">
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1dtv9gjztet5f.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1dtv9gjztet5f.webp" alt="WheelGuard 5" class="w-full h-40 object-cover rounded-lg">
+                </div>
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1du0w8muynb72.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1du0w8muynb72.webp" alt="WheelGuard 6" class="w-full h-40 object-cover rounded-lg">
+                </div>
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1dtv9gjyeud0e.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1dtv9gjyeud0e.webp" alt="WheelGuard 7" class="w-full h-40 object-cover rounded-lg">
+                </div>
+                <div class="gallery-thumbnail cursor-pointer" onclick="openModal('https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1dtv9gk17z90b.webp')">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ras9-m1dtv9gk17z90b.webp" alt="WheelGuard 8" class="w-full h-40 object-cover rounded-lg">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <img id="modalImage" src="" alt="Product Image">
-        </div>
-    </div>
-
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Testimoni Nyata dari Pelanggan yang Puas</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="stars">★★★★★</div>
-                    <p>"Tas ini benar-benar game changer! Sudah 6 bulan pakai dan masih awet banget. Pernah kehujanan deras, dalam tas tetap kering. Kapasitasnya juga luar biasa muat semua kebutuhan kerja dan gym."</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">SA</div>
+    <section id="testimonials" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Apa Kata Pelanggan Kami</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Testimoni asli dari pembeli WheelGuard</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex mr-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">2 minggu lalu</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Produknya sangat bagus! Roda koper saya yang sebelumnya berisik sekarang jadi lebih halus dan nyaman digunakan. Kualitas silikonnya juga premium."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
                         <div>
-                            <strong>Sari Andini</strong>
-                            <br><small>Marketing Manager, Jakarta</small>
+                            <p class="font-semibold">Dian P.</p>
+                            <p class="text-sm text-gray-500">Travel Blogger</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="stars">★★★★★</div>
-                    <p>"Yang paling suka dari tas ini adalah bisa diubah-ubah modelnya. Pagi ke kantor pakai model shoulder bag, sore jalan-jalan ganti jadi backpack. Praktis banget dan stylish!"</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">RM</div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex mr-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">1 bulan lalu</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Worth it banget harganya! Koper saya yang sering dipakai business trip jadi lebih awet rodanya. Pelayanannya juga cepat dan ramah."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
                         <div>
-                            <strong>Rina Mulyani</strong>
-                            <br><small>Entrepreneur, Surabaya</small>
+                            <p class="font-semibold">Rizky A.</p>
+                            <p class="text-sm text-gray-500">Business Consultant</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="stars">★★★★★</div>
-                    <p>"Kualitas material Oxford-nya premium banget! Sudah sering traveling kemana-mana, tas masih kelihatan baru. Waterproof-nya juga beneran work, pernah kena hujan laptop aman."</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">DP</div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex mr-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">3 minggu lalu</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Awalnya ragu karena harganya lebih mahal dari yang lain, tapi setelah pakai ternyata kualitasnya beda banget. Tidak mudah sobek dan pas di rodanya."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
                         <div>
-                            <strong>Devi Putri</strong>
-                            <br><small>Content Creator, Bandung</small>
+                            <p class="font-semibold">Siti M.</p>
+                            <p class="text-sm text-gray-500">Flight Attendant</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="stars">★★★★★</div>
-                    <p>"Best investment ever! Tadinya ragu karena harganya, tapi setelah pakai ternyata worth it banget. Gak perlu beli tas lain lagi karena ini udah all-in-one. Recommended!"</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">LP</div>
-                        <div>
-                            <strong>Lisa Permata</strong>
-                            <br><small>Teacher, Yogyakarta</small>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex mr-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                         </div>
+                        <span class="text-sm text-gray-500">2 bulan lalu</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Sudah beli 3 kali untuk hadiah teman-teman yang suka traveling. Semua puas! Bonusnya juga lucu-lucu. Recomended banget produk ini."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold">Budi W.</p>
+                            <p class="text-sm text-gray-500">Travel Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Pertanyaan yang Sering Diajukan</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Temukan jawaban untuk pertanyaan umum tentang WheelGuard</p>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium flex justify-between items-center">
+                        <span>Apakah WheelGuard cocok untuk semua jenis koper?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p class="text-gray-600">Ya, WheelGuard didesain secara universal untuk cocok dengan hampir semua jenis dan ukuran roda koper, baik untuk koper besar maupun kecil. Produk ini memiliki elastisitas yang baik sehingga dapat menyesuaikan dengan berbagai ukuran roda.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium flex justify-between items-center">
+                        <span>Bagaimana cara memasang WheelGuard?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p class="text-gray-600">Cara pemasangan sangat mudah:
+                            <ol class="list-decimal pl-5 mt-2 space-y-2">
+                                <li>Bersihkan roda koper dari debu dan kotoran</li>
+                                <li>Regangkan WheelGuard sesuai ukuran roda</li>
+                                <li>Pasangkan WheelGuard ke roda dengan menekan hingga merata</li>
+                                <li>Pastikan WheelGuard terpasang dengan rapat dan tidak mudah lepas</li>
+                            </ol>
+                            Kami juga menyertakan panduan pemasangan dalam kemasan produk.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium flex justify-between items-center">
+                        <span>Berapa lama WheelGuard bisa bertahan?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p class="text-gray-600">Dengan penggunaan normal, WheelGuard dapat bertahan hingga 1-2 tahun tergantung intensitas penggunaan. Material silikon premium yang kami gunakan memiliki ketahanan yang baik terhadap gesekan dan perubahan suhu. Banyak pelanggan kami melaporkan WheelGuard masih dalam kondisi baik bahkan setelah pemakaian lebih dari 2 tahun.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium flex justify-between items-center">
+                        <span>Apakah ada garansi untuk produk ini?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p class="text-gray-600">Kami memberikan garansi 30 hari untuk cacat produksi. Jika Anda menerima produk yang rusak atau tidak sesuai, silakan hubungi customer service kami untuk penggantian. Untuk kerusakan karena pemakaian normal, kami tidak memberikan garansi namun produk kami didesain untuk tahan lama.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium flex justify-between items-center">
+                        <span>Berapa lama pengiriman biasanya?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p class="text-gray-600">Waktu pengiriman tergantung lokasi Anda:
+                            <ul class="list-disc pl-5 mt-2 space-y-2">
+                                <li>Jabodetabek: 1-2 hari kerja</li>
+                                <li>Pulau Jawa: 2-3 hari kerja</li>
+                                <li>Luar Jawa: 3-5 hari kerja</li>
+                                <li>Indonesia Timur: 4-7 hari kerja</li>
+                            </ul>
+                            Kami menggunakan jasa pengiriman terpercaya seperti JNE, J&T, dan SiCepat. Nomor resi akan dikirimkan via WhatsApp/SMS/Email setelah barang dikirim.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -760,337 +450,268 @@
     </section>
 
     <!-- Urgency Section -->
-    <section class="urgency-section">
-        <div class="container">
-            <h2 class="animate-on-scroll">⚡ PROMO TERBATAS WAKTU! ⚡</h2>
-            <p class="animate-on-scroll">Dapatkan diskon 49% hanya untuk 100 pembeli pertama hari ini!</p>
-            <div class="countdown-timer animate-on-scroll">
-                <div class="timer-box">
-                    <span class="timer-number" id="hours">23</span>
-                    <span class="timer-label">Jam</span>
+    <section class="py-12 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">PROMO TERBATAS!</h2>
+            <p class="text-xl mb-6 max-w-2xl mx-auto">Dapatkan WheelGuard dengan harga spesial hari ini saja!</p>
+            
+            <div class="flex justify-center mb-8">
+                <div class="bg-white text-blue-600 rounded-lg p-4 mx-2 text-center">
+                    <div class="text-3xl font-bold" id="countdown-hours">12</div>
+                    <div class="text-sm">Jam</div>
                 </div>
-                <div class="timer-box">
-                    <span class="timer-number" id="minutes">45</span>
-                    <span class="timer-label">Menit</span>
+                <div class="bg-white text-blue-600 rounded-lg p-4 mx-2 text-center">
+                    <div class="text-3xl font-bold" id="countdown-minutes">45</div>
+                    <div class="text-sm">Menit</div>
                 </div>
-                <div class="timer-box">
-                    <span class="timer-number" id="seconds">30</span>
-                    <span class="timer-label">Detik</span>
+                <div class="bg-white text-blue-600 rounded-lg p-4 mx-2 text-center">
+                    <div class="text-3xl font-bold" id="countdown-seconds">30</div>
+                    <div class="text-sm">Detik</div>
                 </div>
             </div>
-            <p class="animate-on-scroll">🔥 Jangan sampai menyesal! Stok terbatas hanya 23 pcs tersisa!</p>
+            
+            <div class="bg-white text-gray-800 rounded-lg p-6 max-w-md mx-auto mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-semibold">Harga Normal:</span>
+                    <span class="text-xl line-through text-red-500">Rp 187.999</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-lg font-semibold">Harga Promo:</span>
+                    <span class="text-2xl font-bold text-blue-600">Rp 125.999</span>
+                </div>
+                <div class="mt-4 bg-yellow-100 text-yellow-800 text-sm p-2 rounded">
+                    <i class="fas fa-gift mr-2"></i> Bonus Travel Kit senilai Rp 35.000 untuk 50 pembeli pertama hari ini!
+                </div>
+            </div>
+            
+            <p class="mb-6">Stok terbatas! Hanya tersisa <span id="urgency-stock" class="font-bold">78</span> set lagi.</p>
+            
+            <a href="https://nava.orderonline.id/heywego-silikon-roda-koper" class="bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-12 rounded-full shadow-lg transition duration-300 inline-flex items-center text-lg">
+                <i class="fas fa-shopping-cart mr-3"></i> PESAN SEKARANG
+            </a>
         </div>
     </section>
 
-    <!-- Price Banner -->
-    <div class="price-banner">
-        <div class="price-content">
-            <div class="price-info">
-                <div class="original-price">Rp 276.999</div>
-                <div class="current-price">
-                    Rp 185.999
-                    <span class="discount-badge">HEMAT 49%</span>
+    <!-- Sticky Order Banner -->
+    <div class="sticky-banner bg-white py-3 px-4 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-2 md:mb-0">
+                <div class="flex items-center">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m1gulkrlb8l7a2.webp" alt="WheelGuard" class="h-12 w-12 rounded-full object-cover mr-3">
+                    <div>
+                        <p class="font-semibold">Universal Silicone Luggage Wheel Guard</p>
+                        <div class="flex items-center">
+                            <span class="text-red-500 font-bold mr-2">Rp 125.999</span>
+                            <span class="text-sm line-through text-gray-500">Rp 187.999</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a href="https://nava.orderonline.id/tas-waterproof-oxford-premium" class="cta-button">
-                <i class="fas fa-shopping-cart"></i> BELI SEKARANG JUGA!
-            </a>
+            <div class="flex items-center">
+                <div class="mr-4 hidden sm:block">
+                    <div class="flex items-center">
+                        <div class="w-32 bg-gray-200 rounded-full h-2 mr-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <span class="text-sm text-gray-600">Stok: <span id="banner-stock">78</span>/100</span>
+                    </div>
+                </div>
+                <a href="https://nava.orderonline.id/heywego-silikon-roda-koper" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow transition duration-300 whitespace-nowrap">
+                    BELI SEKARANG
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- Bonus Section -->
-    <section class="bonus-section" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 4rem 0; text-align: center;">
-        <div class="container">
-            <h2 class="animate-on-scroll" style="margin-bottom: 2rem;">🎁 BONUS EKSKLUSIF UNTUK ANDA!</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div class="bonus-card animate-on-scroll" style="background: rgba(255,255,255,0.2); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <i class="fas fa-gift" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <h3>Tas Organizer Gratis</h3>
-                    <p>Dapatkan tas organizer premium senilai Rp 50.000 untuk mengatur barang dalam tas</p>
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="modal-overlay absolute inset-0"></div>
+        <div class="modal-container bg-white rounded-lg shadow-xl z-50 max-w-4xl mx-4">
+            <div class="modal-content p-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold">WheelGuard</h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
                 </div>
-                <div class="bonus-card animate-on-scroll" style="background: rgba(255,255,255,0.2); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <i class="fas fa-shield-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <h3>Garansi 1 Tahun</h3>
-                    <p>Jaminan kualitas produk dengan garansi resmi 1 tahun full replacement</p>
-                </div>
-                <div class="bonus-card animate-on-scroll" style="background: rgba(255,255,255,0.2); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <i class="fas fa-shipping-fast" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <h3>Gratis Ongkir</h3>
-                    <p>Pengiriman gratis ke seluruh Indonesia untuk pembelian hari ini</p>
-                </div>
+                <img id="modal-image" src="" alt="Product Image" class="w-full max-h-screen-80 object-contain">
             </div>
         </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section" style="padding: 5rem 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Pertanyaan yang Sering Diajukan</h2>
-            <div style="max-width: 800px; margin: 0 auto; margin-top: 3rem;">
-                <div class="faq-item animate-on-scroll" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 1.5rem; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; background: #667eea; color: white;">
-                        <span>Apakah benar-benar 100% tahan air?</span>
-                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
-                    </div>
-                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p style="padding: 1.5rem 0;">Ya, produk ini menggunakan material Oxford premium dengan coating waterproof yang telah teruji. Barang di dalam tas akan tetap kering meski terkena hujan deras.</p>
-                    </div>
-                </div>
-                <div class="faq-item animate-on-scroll" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 1.5rem; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; background: #667eea; color: white;">
-                        <span>Berapa kapasitas maksimal tas ini?</span>
-                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
-                    </div>
-                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p style="padding: 1.5rem 0;">Tas ini memiliki kapasitas besar yang muat laptop 15 inch, buku, pakaian ganti, kosmetik, dan kebutuhan harian lainnya. Cocok untuk traveling, kerja, atau aktivitas sehari-hari.</p>
-                    </div>
-                </div>
-                <div class="faq-item animate-on-scroll" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 1.5rem; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; background: #667eea; color: white;">
-                        <span>Bagaimana cara mengubah model tas?</span>
-                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
-                    </div>
-                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p style="padding: 1.5rem 0;">Sangat mudah! Cukup dengan mengatur posisi tali yang sudah disediakan. Dalam hitungan detik, Anda bisa mengubah dari backpack menjadi shoulder bag atau handbag sesuai kebutuhan.</p>
-                    </div>
-                </div>
-                <div class="faq-item animate-on-scroll" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 1.5rem; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; background: #667eea; color: white;">
-                        <span>Apakah ada garansi?</span>
-                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
-                    </div>
-                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p style="padding: 1.5rem 0;">Ya, kami memberikan garansi resmi 1 tahun untuk setiap pembelian. Jika ada kerusakan akibat cacat produksi, kami akan mengganti dengan yang baru.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Security & Trust Section -->
-    <section class="security-section" style="padding: 3rem 0; background: white; text-align: center;">
-        <div class="container">
-            <h3 style="margin-bottom: 2rem; color: #2c3e50;">Berbelanja Aman & Terpercaya</h3>
-            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; align-items: center;">
-                <div class="trust-badge" style="display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: #2ecc71;"></i>
-                    <span>SSL Secured</span>
-                </div>
-                <div class="trust-badge" style="display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-truck" style="font-size: 2rem; color: #3498db;"></i>
-                    <span>Pengiriman Terpercaya</span>
-                </div>
-                <div class="trust-badge" style="display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-money-bill-wave" style="font-size: 2rem; color: #e74c3c;"></i>
-                    <span>COD Available</span>
-                </div>
-                <div class="trust-badge" style="display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-headset" style="font-size: 2rem; color: #9b59b6;"></i>
-                    <span>24/7 Support</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer style="background: #2c3e50; color: white; padding: 2rem 0; text-align: center;">
-        <div class="container">
-            <p>&copy; 2025 NAVA Store. All rights reserved.</p>
-            <p style="margin-top: 1rem; opacity: 0.8;">Tas Premium Berkualitas Tinggi untuk Wanita Modern</p>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">WheelGuard</h3>
+                    <p class="text-gray-400">Solusi terbaik untuk melindungi roda koper Anda. Membuat setiap perjalanan lebih nyaman dan bebas khawatir.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white">Fitur Produk</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white">Galeri</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimoni</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kontak Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">0812-3456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">cs@wheelguard.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">Jakarta, Indonesia</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Pembayaran Aman</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="bg-white p-2 rounded flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Old_Visa_Logo.svg/2560px-Old_Visa_Logo.svg.png" alt="Visa" class="h-6">
+                        </div>
+                        <div class="bg-white p-2 rounded flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" class="h-6">
+                        </div>
+                        <div class="bg-white p-2 rounded flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_doku.svg/1280px-Logo_doku.svg.png" alt="Doku" class="h-6">
+                        </div>
+                        <div class="bg-white p-2 rounded flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo.svg/1200px-Logo_ovo.svg.png" alt="OVO" class="h-6">
+                        </div>
+                        <div class="bg-white p-2 rounded flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Dana_logo.svg/2560px-Dana_logo.svg.png" alt="DANA" class="h-6">
+                        </div>
+                        <div class="bg-white p-2 rounded flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Shopee_logo.svg/2560px-Shopee_logo.svg.png" alt="ShopeePay" class="h-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 WheelGuard. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Dynamic counters
-        function updateCounters() {
-            const viewers = document.getElementById('viewers');
-            const stock = document.getElementById('stock');
-            
-            // Random viewers between 1200-1300
-            const viewerCount = Math.floor(Math.random() * 100) + 1200;
-            viewers.textContent = viewerCount;
-            
-            // Random stock between 20-25
-            const stockCount = Math.floor(Math.random() * 6) + 20;
-            stock.textContent = stockCount;
-        }
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
 
-        // Update counters every 30 seconds
-        setInterval(updateCounters, 30000);
-
-        // Countdown timer
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const endTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
-            
-            const timer = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = endTime - now;
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
                 
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-                
-                if (distance < 0) {
-                    clearInterval(timer);
-                    // Reset countdown
-                    updateCountdown();
-                }
-            }, 1000);
-        }
-
-        updateCountdown();
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
 
         // Image modal
         function openModal(imageSrc) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            modalImage.src = imageSrc;
-            modal.style.display = 'block';
+            document.getElementById('image-modal').classList.remove('hidden');
+            document.getElementById('modal-image').src = imageSrc;
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
+            document.getElementById('image-modal').classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
 
         // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target === modal) {
+        document.getElementById('image-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
                 closeModal();
             }
+        });
+
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+            
+            const diff = midnight - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
         }
 
-        // FAQ Toggle
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('i');
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Dynamic counters
+        function updateCounters() {
+            // Simulate decreasing stock
+            const stockElement = document.getElementById('stock-counter');
+            const urgencyStockElement = document.getElementById('urgency-stock');
+            const bannerStockElement = document.getElementById('banner-stock');
             
-            if (answer.style.maxHeight === '0px' || answer.style.maxHeight === '') {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.style.transform = 'rotate(180deg)';
-            } else {
-                answer.style.maxHeight = '0px';
-                icon.style.transform = 'rotate(0deg)';
+            let stock = parseInt(stockElement.textContent);
+            if (stock > 0) {
+                // Random decrease between 0-2 every 10-30 seconds
+                if (Math.random() > 0.7) {
+                    const decrease = Math.floor(Math.random() * 3);
+                    stock = Math.max(0, stock - decrease);
+                    
+                    stockElement.textContent = stock;
+                    urgencyStockElement.textContent = stock;
+                    bannerStockElement.textContent = stock;
+                    
+                    // Add visual feedback
+                    if (decrease > 0) {
+                        stockElement.classList.add('text-red-500', 'scale-110');
+                        setTimeout(() => {
+                            stockElement.classList.remove('text-red-500', 'scale-110');
+                        }, 500);
+                    }
+                }
             }
+            
+            // Simulate viewers
+            const viewers = Math.floor(Math.random() * 50) + 30;
+            document.getElementById('viewers-counter').textContent = viewers;
         }
+
+        setInterval(updateCounters, 10000);
+        updateCounters();
 
         // Scroll animations
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('animated');
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
                 }
             });
-        }
+        }, observerOptions);
 
-        window.addEventListener('scroll', animateOnScroll);
-        
-        // Initial animation check
-        animateOnScroll();
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        document.querySelectorAll('.fade-in, .slide-in').forEach(el => {
+            observer.observe(el);
         });
-
-        // Add some interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add hover effects to cards
-            const cards = document.querySelectorAll('.feature-card, .problem-card, .testimonial-card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
-            // Add pulse effect to CTA buttons
-            const ctaButtons = document.querySelectorAll('.cta-button');
-            ctaButtons.forEach(button => {
-                button.addEventListener('mouseenter', function() {
-                    this.style.animation = 'pulse 1s infinite';
-                });
-                
-                button.addEventListener('mouseleave', function() {
-                    this.style.animation = 'pulse 2s infinite';
-                });
-            });
-        });
-
-        // Add urgency messaging
-        function showUrgencyMessage() {
-            const messages = [
-                "⚡ Sarah dari Jakarta baru saja memesan 2 pcs!",
-                "🔥 Stok tinggal sedikit! Jangan sampai kehabisan!",
-                "💝 Promo berakhir dalam beberapa jam!",
-                "🏃‍♀️ 15 orang sedang checkout sekarang!",
-                "⭐ Rata-rata 8 pcs terjual setiap jam!"
-            ];
-            
-            const message = messages[Math.floor(Math.random() * messages.length)];
-            
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: linear-gradient(135deg, #e74c3c, #c0392b);
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 10px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-                z-index: 1500;
-                animation: slideInRight 0.5s ease-out;
-                max-width: 300px;
-                font-size: 0.9rem;
-                font-weight: 500;
-            `;
-            
-            notification.textContent = message;
-            document.body.appendChild(notification);
-            
-            // Remove after 4 seconds
-            setTimeout(() => {
-                notification.style.animation = 'slideInRight 0.5s ease-out reverse';
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
-                    }
-                }, 500);
-            }, 4000);
-        }
-
-        // Show urgency message every 10 seconds
-        setInterval(showUrgencyMessage, 10000);
-        
-        // Show first message after 3 seconds
-        setTimeout(showUrgencyMessage, 3000);
     </script>
 </body>
 </html>
